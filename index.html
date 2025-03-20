@@ -1,211 +1,414 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-</head>
-<body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-brand">
-            <i class="fas fa-code"></i>
-            Portfolio
-        </div>
-        <ul class="nav-links">
-            <li><a href="#about"><i class="fas fa-user"></i> About Me</a></li>
-            <li><a href="#resume"><i class="fas fa-file-alt"></i> Resume</a></li>
-            <li><a href="#projects"><i class="fas fa-laptop-code"></i> Projects</a></li>
-            <li><a href="#certifications"><i class="fas fa-certificate"></i> Certifications</a></li>
-            <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
-        </ul>
-    </nav>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MyPortfolio</title>
+    <meta name="description" content="Personal portfolio showcasing my skills, projects, and experience" />
+    <meta name="author" content="Kantipudi Srinidhi" />
+    
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  </head>
 
-    <!-- About Section -->
-    <section id="about" class="about-section">
-        <div class="about-container">
+  <body>
+    <div id="root">
+      <!-- Header Section -->
+      <header>
+        <div class="container">
+          <nav>
+            <div class="logo">Portfolio</div>
+            <ul class="nav-links">
+              <li><a href="#about" class="active">About</a></li>
+              <li><a href="#education">Education</a></li>
+              <li><a href="#skills">Skills</a></li>
+              <li><a href="#resume">Resume</a></li>
+              <li><a href="#projects">Projects</a></li>
+              <li><a href="#certifications">Certifications</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="menu-btn">
+              <i class="fas fa-bars"></i>
+            </div>
+          </nav>
+        </div>
+      </header>
+
+      <!-- Hero Section -->
+      <section id="hero" class="section-animate">
+        <div class="container">
+          <div class="hero-content">
+            <h1>Hello, I'm <span class="highlight">Kantipudi Srinidhi</span></h1>
+            <p class="subtitle">Frontend Developer & AWS Cloud Engineer</p>
+            <div class="cta-buttons">
+              <a href="#projects" class="btn primary">View Projects</a>
+              <a href="#contact" class="btn secondary">Contact Me</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section id="about" class="section-animate">
+        <div class="container">
+          <h2 class="section-title">About Me</h2>
+          <div class="about-content">
             <div class="about-image">
+              <div class="image-container">
                 <img src="sri.jpg" alt="Profile Picture">
+              </div>
             </div>
-            <div class="about-content">
-                <h2>About Me</h2>
-                <p>Hi, I'm Kantipudi Srinidhi, a B.Tech Computer Science student with a strong interest in cloud computing, machine learning, and software development. I have experience working with AWS, Python, C++, Java, and web technologies and enjoy building efficient and scalable solutions.</p>
-                <p> I’ve worked on projects like AWS S3 integrations, machine learning-based movie recommendations, and AI-driven learning platforms. With a passion for technology and innovation, I am always eager to learn, solve problems, and develop impactful applications. </p>
-            </div>
-        </div>
-    </section>
+            <div class="about-text">
+              <!-- <p>Hello! I'm a passionate frontend developer with a keen eye for creating engaging user experiences. As a fresher in the tech industry, I bring fresh perspectives and modern approaches to web development.</p>
+              <p>I specialize in HTML, CSS, JavaScript, and responsive design principles. My goal is to build applications that are not only visually appealing but also intuitive and accessible to all users.</p>
+              <p>When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, or enhancing my skills through continuous learning.</p>
+               -->
 
-    <!-- Resume Section -->
-    <section id="resume" class="resume-section">
-        <h2>Resume</h2>
-        <div class="resume-container">
-            <div class="education">
-                <h3><i class="fas fa-graduation-cap"></i> Education</h3>
-                <div class="education-item">
-                    <h4>Aditya Colloge Of Engineering And Technology </h4>
-                    <p>Btech - Artificial Intelligence & Machine Learning</p>
-                    <p><i class="far fa-calendar-alt"></i> 2022-Present</p>
-                </div>
-                <div class="education-item">
-                    <h4>Sasi Junior College</h4>
-                    <p>MPC</p>
-                    <p><i class="far fa-calendar-alt"></i> 2020 - 2022</p>
-                </div>
-            </div>
-            <div class="skills">
-                <h3><i class="fas fa-tools"></i> Skills</h3>
-                <div class="skills-grid">
-                    <div class="skill-item"><i class="fab fa-html5"></i> HTML5</div>
-                    <div class="skill-item"><i class="fab fa-css3-alt"></i> CSS3</div>
-                    <div class="skill-item"><i class="fab fa-js"></i> JavaScript</div>
-                    <div class="skill-item"><i class="fas fa-brain"></i> Machine Learning</div>
-                    <div class="skill-item"><i class="fab fa-aws"></i> AWS Cloud</div>
-                    <div class="skill-item"><i class="fab fa-git-alt"></i> Git</div>
-                </div>
-            </div>
-            <button class="download-btn" onclick="window.open('your-resume.pdf')">
-                <i class="fas fa-download"></i> Download CV
-            </button>
-        </div>
-    </section>
+               <p>Hello! I'm <b>Kantipudi Srinidhi</b>, a frontend developer and B.Tech Computer Science student with a strong interest in cloud computing, machine learning, and software development.
+                <br><br>
 
-    <!-- Projects Section -->
-    <section id="projects" class="projects-section">
-        <h2>Projects</h2>
-        <div class="projects-grid">
-            <!-- Project 1 -->
+                I specialize in <b>HTML, CSS, JavaScript</b>, and responsive design, ensuring applications are visually appealing, intuitive, and accessible. I also have experience with <b>AWS, Python, C++, and Java</b>, enabling me to build efficient and scalable solutions.
+                <br><br>
+                I've worked on projects involving AWS S3 integrations, machine learning-based recommendations, and AI-driven learning platforms. Beyond coding, I enjoy exploring new technologies, contributing to open-source projects, and continuous learning to stay ahead in tech.
+                <br>
+                With a passion for innovation and problem-solving, I strive to develop impactful applications. </p>
+              <div class="social-links">
+                <a href="https://github.com/srinidhi2026" class="social-icon"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/kantipudisrinidhi/" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                <a href="mailto:nidhikantipudi@gmail.com" class="social-icon"><i class="fas fa-envelope"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Education Section -->
+      <section id="education" class="section-animate">
+        <div class="container">
+          <h2 class="section-title">Education</h2>
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <h3>Bachelor of Technology</h3>
+                <p class="timeline-date">2022 - 2026</p>
+                <p class="institution">Aditya College of Engineering & Technology</p>
+                <p>Artificial Intelligence and Machine Learning</p>
+                <p>CGPA: 6.1/10</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <h3>Higher Secondary Education</h3>
+                <p class="timeline-date">2020 - 2022</p>
+                <p class="institution">Sasi Junior College</p>
+                <p>MPC Stream</p>
+                <p>Percentage: 72%</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <h3>Secondary Education</h3>
+                <p class="timeline-date">2020</p>
+                <p class="institution">Sasi English Medium High School</p>
+                <p>Percentage: 100%</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Skills Section -->
+      <section id="skills" class="section-animate">
+        <div class="container">
+          <h2 class="section-title">Skills</h2>
+          <div class="skills-container">
+            <div class="skill-category">
+              <h3>Frontend</h3>
+              <div class="skill-items tech-stack">
+                <div class="tech-item">HTML</div>
+                <div class="tech-item">CSS</div>
+                <div class="tech-item">JavaScript</div>
+              </div>
+            </div>
+            
+            <div class="skill-category">
+              <h3>Tools & Technologies</h3>
+              <div class="skill-items tech-stack">
+                <div class="tech-item">Github</div>
+                <div class="tech-item">VS Code</div>
+                <div class="tech-item">Frontend</div>
+                <div class="tech-item">AWS</div>
+              </div>
+            </div>
+
+            <div class="skill-category">
+                <h3>Programming Languages</h3>
+                <div class="skill-items tech-stack">
+                  <div class="tech-item">C++</div>
+                  <div class="tech-item">Python</div>
+                  <div class="tech-item">Java</div>
+                  <div class="tech-item">JavaScript</div>
+                </div>
+              </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Resume Section -->
+      <section id="resume" class="section-animate">
+        <div class="container">
+          <h2 class="section-title">Resume</h2>
+          <div class="resume-content">
+            <div class="resume-preview">
+              <img src="resume_preview.jpg" alt="Resume Preview">
+            </div>
+            <div class="resume-actions">
+              <p>Take a look at my full resume to see all my qualifications and experience in detail.</p>
+              <a href="https://drive.google.com/file/d/1pwqqeGrOJcwIahyf3KfjsQ82tkG21tAX/view?usp=sharing" class="btn primary download-btn"><i class="fas fa-download"></i> Download PDF</a>
+              <a href="https://drive.google.com/file/d/1pwqqeGrOJcwIahyf3KfjsQ82tkG21tAX/view?usp=sharing" class="btn secondary view-btn"><i class="fas fa-eye"></i> View Online</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects Section -->
+      <section id="projects" class="section-animate">
+        <div class="container">
+          <h2 class="section-title">Projects</h2>
+          <div class="projects-grid">
             <div class="project-card">
-                <div class="project-image">
-                    <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=300" alt="Project 1">
-                    <div class="project-overlay">
-                        <a href="#" class="project-link"><i class="fab fa-github"></i> Source Code</a>
-                        <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                    </div>
+              <div class="project-image">
+                <img src="uploads3.jpg" alt="Project 1">
+              </div>
+              <div class="project-info">
+                <h3> Uploading Photos to Amazon S3 from a Browser</h3>
+                <p>Secure and efficient cloud storage solution for web applications handling large media uploads.</p>
+                <div class="project-tags">
+                  <span>AWS S3</span>
+                  <span>IAM</span>
+                  <span>AWS SDK (JavaScript)</span>
                 </div>
-                <div class="project-info">
-                    <h3>Uploading Photos to Amazon S3 from a Browser</h3>
-                    <p>A modern web application built with cutting-edge technologies.</p>
-                    <div class="tech-stack">
-                        <span>AWS S3</span>
-                        <span>IAM</span>
-                        <span>AWS SDK for JS</span>
-                    </div>
+              </div>
+              <div class="project-overlay">
+                <div class="project-links">
+                  <a href="https://github.com/srinidhi2026/AWS-Projects/tree/main/Upload-Images-to-S3-Bucket" class="project-link"><i class="fas fa-code"></i> Source Code</a>
+                  <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
                 </div>
+              </div>
             </div>
-
-            <!--Project - 2-->
+            
             <div class="project-card">
-                <div class="project-image">
-                    <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&q=80&w=300" alt="Project 2">
-                    <div class="project-overlay">
-                        <a href="#" class="project-link"><i class="fab fa-github"></i> Source Code</a>
-                        <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                    </div>
+              <div class="project-image">
+                <img src="movieRecommendation.jpeg" alt="Project 2">
+              </div>
+              <div class="project-info">
+                <h3>OTT Movie Recommendation System</h3>
+                <p>Personalized streaming recommendations based on user preferences and genre patterns.</p>
+                <div class="project-tags">
+                  <span>Python</span>
+                  <span>Scikit-Learn</span>
+                  <span>Numpy</span>
+                  <span>Pandas</span>
                 </div>
-                <div class="project-info">
-                    <h3>ElevateEd- AI-Based Interactive Learning Platform</h3>
-                    <p>An innovative solution for modern web challenges.</p>
-                    <div class="tech-stack">
-                        <span>HTML</span>
-                        <span>CSS</span>
-                        <span>JavaScript</span>
-                        <span>PHP</span>
-                        <span>MySQL</span>
-                        <span>Machine Learning</span>
-                        <span>AWS Cloud</span>
-                        <span>Xampp server</span>
-                    </div>
+              </div>
+              <div class="project-overlay">
+                <div class="project-links">
+                  <a href="https://github.com/srinidhi2026/MachinLearningProjects/blob/main/ott_recommendation_system%20(1).ipynb" class="project-link"><i class="fas fa-code"></i> Source Code</a>
+                  <a href="https://github.com/srinidhi2026/MachinLearningProjects/blob/main/ott_recommendation_system%20(1).ipynb" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
                 </div>
+              </div>
             </div>
-
-            <!-- Project 3 -->
+            
             <div class="project-card">
-                <div class="project-image">
-                    <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&q=80&w=300" alt="Project 2">
-                    <div class="project-overlay">
-                        <a href="#" class="project-link"><i class="fab fa-github"></i> Source Code</a>
-                        <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                    </div>
+              <div class="project-image">
+                <img src="ElevateEd.webp" alt="Project 3">
+              </div>
+              <div class="project-info">
+                <h3> ElevateEd - AI-Based Interactive Learning Platform</h3>
+                <p>Personalized educational platform enabling students to manage learning progress efficiently.</p>
+                <div class="project-tags">
+                  <span>HTML</span>
+                  <span>CSS</span>
+                  <span>JavaScript</span>
+                  <span>PHP</span>
+                  <span>MySQl</span>
+                  <span>XAMPP Server</span>
+                  <span>AWS Cloud</span>
                 </div>
-                <div class="project-info">
-                    <h3> OTT Movie Recommendation System- Using Cosine Similarity</h3>
-                    <p>An innovative solution for modern web challenges.</p>
-                    <div class="tech-stack">
-                        <span>Python</span>
-                        <span>Scikit-Learn</span>
-                        <span>Pandas</span>
-                        <span>NumPy</span>
-                    </div>
+              </div>
+              <div class="project-overlay">
+                <div class="project-links">
+                  <a href="https://github.com/srinidhi2026/ElevateED" class="project-link"><i class="fas fa-code"></i> Source Code</a>
+                  <a href="http://apps.technicalhub.io:5002/ElevateEd08" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
                 </div>
+              </div>
             </div>
+            
+            <div class="project-card">
+              <div class="project-image">
+                <img src="portfolio.jpeg" alt="Project 4">
+              </div>
+              <div class="project-info">
+                <h3>Portfolio Website</h3>
+                <p>A personal portfolio website showcasing my projects, skills, and professional journey.</p>
+                <div class="project-tags">
+                  <span>HTML</span>
+                  <span>CSS</span>
+                  <span>JavaScript</span>
+                </div>
+              </div>
+              <div class="project-overlay">
+                <div class="project-links">
+                  <a href="https://github.com/srinidhi2026/MyPortfolio" class="project-link"><i class="fas fa-code"></i> Source Code</a>
+                  <a href="https://srinidhi2026.github.io/MyPortfolio/" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-    </section>
+      </section>
 
-    <!-- Certifications Section -->
-    <section id="certifications" class="certifications-section">
-        <h2>Certifications</h2>
-        <div class="certifications-grid">
-            <!-- Certificate 1 -->
-            <div class="certificate-card" onclick="window.open('certificate-link')">
-                <div class="certificate-image">
-                    <img src="https://images.unsplash.com/photo-1496469888073-80de7e952517?auto=format&fit=crop&q=80&w=300" alt="Certificate 1">
-                </div>
-                <div class="certificate-info">
-                    <h3><i class="fas fa-award"></i> HTML & CSS </h3>
-                    <p>Advanced certification in modern web development technologies and best practices.</p>
-                </div>
+      <!-- Certifications Section -->
+      <section id="certifications" class="section-animate">
+        <div class="container">
+          <h2 class="section-title">Certifications</h2>
+          <div class="certifications-grid">
+            <div class="certification-card">
+              <div class="certification-icon">
+                <i class="fas fa-certificate"></i>
+              </div>
+              <div class="certification-info">
+                <h3>HTML & CSS</h3>
+                <p class="issuer">IT Specialist - Certiport Pearson</p>
+                <p class="issue-date">6th May 2023</p>
+              </div>
+              <div class="certification-overlay">
+                <a href="https://drive.google.com/file/d/1rXL1chO-zcCl2m6PvCsHFsDdDppfzfDA/view?usp=sharing" class="cert-link"><i class="fas fa-external-link-alt"></i> View Certificate</a>
+              </div>
             </div>
-            <!-- Certificate 2 -->
-            <div class="certificate-card" onclick="window.open('certificate-link')">
-                <div class="certificate-image">
-                    <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&q=80&w=300" alt="Certificate 2">
-                </div>
-                <div class="certificate-info">
-                    <h3><i class="fas fa-award"></i> Python - Certiport Perason </h3>
-                    <p>Professional certification in user interface and experience design principles.</p>
-                </div>
+            
+            <div class="certification-card">
+              <div class="certification-icon">
+                <i class="fas fa-certificate"></i>
+              </div>
+              <div class="certification-info">
+                <h3>Python</h3>
+                <p class="issuer">IT Specialist - Certiport Pearson</p>
+                <p class="issue-date">10th May 2023</p>
+              </div>
+              <div class="certification-overlay">
+                <a href="https://drive.google.com/file/d/1_j93A72CcSXueSupFbtnQqPPqzcgX0Ea/view?usp=sharing" class="cert-link"><i class="fas fa-external-link-alt"></i> View Certificate</a>
+              </div>
             </div>
-            <!-- Certificate 3 -->
-            <div class="certificate-card" onclick="window.open('certificate-link')">
-                <div class="certificate-image">
-                    <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&q=80&w=300" alt="Certificate 2">
-                </div>
-                <div class="certificate-info">
-                    <h3><i class="fas fa-award"></i> AWS Cloud Foundations </h3>
-                    <p>Professional certification in user interface and experience design principles.</p>
-                </div>
+            
+            <div class="certification-card">
+              <div class="certification-icon">
+                <i class="fas fa-certificate"></i>
+              </div>
+              <div class="certification-info">
+                <h3>AWS Cloud Foundations</h3>
+                <p class="issuer">AWS Academy</p>
+                <p class="issue-date">7th July 2024</p>
+              </div>
+              <div class="certification-overlay">
+                <a href="https://drive.google.com/file/d/1YK-8I3_VvMwUR3iKxTsA-QRNGxxWDSR6/view?usp=sharing" class="cert-link"><i class="fas fa-external-link-alt"></i> View Certificate</a>
+              </div>
             </div>
+            
+            <div class="certification-card">
+              <div class="certification-icon">
+                <i class="fas fa-certificate"></i>
+              </div>
+              <div class="certification-info">
+                <h3>Postman API Fundamentals Certificate</h3>
+                <p class="issuer">Postman</p>
+                <p class="issue-date">3rd August 2024</p>
+              </div>
+              <div class="certification-overlay">
+                <a href="https://drive.google.com/file/d/1Fv3GJD4wAz9_s-UwIRONPe-T1D_rZkHK/view?usp=sharing" class="cert-link"><i class="fas fa-external-link-alt"></i> View Certificate</a>
+              </div>
+            </div>
+          </div>
         </div>
-    </section>
+      </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact-section">
-        <h2>Contact Me</h2>
-        <div class="contact-container">
+      <!-- Contact Section -->
+      <section id="contact" class="section-animate">
+        <div class="container">
+          <h2 class="section-title">Contact Me</h2>
+          <div class="contact-content">
+            <div class="contact-info">
+              <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <p>nidhikantipudi@gmail.com</p>
+              </div>
+              <div class="contact-item">
+                <i class="fas fa-phone"></i>
+                <p>+91 949-272-28-99</p>
+              </div>
+              <div class="contact-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <p>Rajahmundry, Andhra Pradesh, India</p>
+              </div>
+              <div class="social-links">
+                <a href="https://github.com/srinidhi2026" class="social-icon"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/kantipudisrinidhi/" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                <a href="mailto:nidhikantipudi@gmail.com" class="social-icon"><i class="fas fa-envelope"></i></a>
+              </div>
+            </div>
             <div class="contact-form">
-                <form id="contactForm">
-                    <input type="text" placeholder="Name" required>
-                    <input type="email" placeholder="Email" required>
-                    <textarea placeholder="Message" required></textarea>
-                    <button type="submit"><i class="fas fa-paper-plane"></i> Send Message</button>
-                </form>
+              <form id="contactForm">
+                <div class="form-group">
+                  <label for="name">Name</label>
+                  <input type="text" id="name" required>
+                </div>
+                <div class="form-group">
+                  <label for="email">Email</label>
+                  <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                  <label for="subject">Subject</label>
+                  <input type="text" id="subject" required>
+                </div>
+                <div class="form-group">
+                  <label for="message">Message</label>
+                  <textarea id="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn primary">Send Message</button>
+              </form>
             </div>
-            <div class="contact-map">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15260.355776523018!2d81.78977295589623!3d17.019306740901143!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a37a3e809d10d49%3A0x8b644c0609bd1311!2sNarayanapuram%2C%20Cyclone%20Colony%2C%20Rajamahendravaram%2C%20Andhra%20Pradesh%20533106!5e0!3m2!1sen!2sin!4v1742063256630!5m2!1sen!2sin"
-                    width="100%" 
-                    height="450" 
-                    style="border:0;" 
-                    allowfullscreen="" 
-                    loading="lazy">
-                </iframe>
-            </div>
+          </div>
+          <!-- Map container -->
+          <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15260.355776523018!2d81.78977295589623!3d17.019306740901143!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a37a3e809d10d49%3A0x8b644c0609bd1311!2sNarayanapuram%2C%20Cyclone%20Colony%2C%20Rajamahendravaram%2C%20Andhra%20Pradesh%20533106!5e0!3m2!1sen!2sin!4v1742063256630!5m2!1sen!2sin"
+                width="100%" 
+                height="450" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy">
+            </iframe>
+          </div>
         </div>
-    </section>
+      </section>
 
-    <script src="main.js"></script>
-</body>
+      <!-- Footer -->
+      <footer>
+        <div class="container">
+          <p>&copy; 2025 kantipudi Srinidhi. All rights reserved.</p>
+        </div>
+      </footer>
+    </div>
+
+    <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS VERY COMMENT! -->
+    <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
+    <script src="script.js"></script>
+  </body>
 </html>
